@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            padding-top: 56px; /* Corrige le padding global */
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s; /* Ajoute la transition pour l'effet */
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au survol */
+        }
+
+        .skills img {
+            width: 60px;
+            height: 60px;
+            margin: 15px;
+            transition: transform 0.3s; /* Animation sur l'image au survol */
+        }
+
+        .skills img:hover {
+            transform: scale(1.1); /* Agrandissement de l'image au survol */
+        }
+
+        /* Réduit l'espace entre le header et la section "À propos" */
+        header {
+            background: url('path_to_your_image.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 40px 0; /* Réduit l'espace entre le header et la section suivante */
+        }
+
+        /* Navbar rose */
+        .navbar {
+            background-color: #FF69B4; /* Couleur rose */
+        }
+
+        /* Supprimer le logo de la navbar */
+        .navbar-brand img {
+            display: none; /* Masque l'image du logo */
+        }
+
+        /* Réduit l'espace entre la photo de profil et la section "À propos" */
+        #about {
+            margin-top: -50px; /* Réduit la marge en haut de la section "À propos" */
+        }
+
+        /* Améliore l'apparence du formulaire */
+        form {
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajout du style pour le cadre autour de "À propos" */
+        .about-frame {
+            border: 2px solid #FF69B4; /* Bordure rose */
+            padding: 20px; /* Espacement intérieur */
+            margin-top: 20px; /* Espacement entre le titre et le cadre */
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre autour du cadre */
+            background-color: #f9f9f9; /* Fond clair */
+            max-width: 700px; /* Largeur maximale */
+            margin-left: auto; /* Centrer horizontalement */
+            margin-right: auto; /* Centrer horizontalement */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Retirer le logo en supprimant l'élément <img> -->
+            <a class="navbar-brand" href="#">Mon Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-black text-center animate__animated animate__fadeIn">
+        <div class="container d-flex align-items-center flex-column">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p class="lead">Découvrez mes projets et mon parcours</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center animate__animated animate__fadeInLeft">
+            <h2>À propos de moi</h2>
+            <img src="WhatsApp Image 2025-02-13 à 09.30.21_dd8696ed.jpg" alt="Photo de Profil" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+            <h3>KHADY FAYE</h3>
+            <!-- Ajout du cadre ici -->
+            <div class="about-frame">
+                <p>Étudiante en informatique de gestion avec une passion pour le développement web. J'ai acquis une solide expérience en HTML, CSS, JavaScript et Bootstrap, et je suis toujours à la recherche de nouvelles technologies à explorer. Mes projets incluent des sites web réactifs et des applications interactives conçus pour améliorer l'efficacité et l'expérience utilisateur. Bienvenue dans mon portfolio où vous découvrirez mes travaux et collaborations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Mes Compétences</h2>
+            <div class="row text-center skills">
+                <div class="col-md-3">
+                    <img src="téléchargementlin.png" alt="Linux" title="Linux">
+                    <p>Linux : Système d'exploitation open-source très puissant utilisé principalement dans les serveurs et les environnements de développement.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementword.png" alt="WordPress" title="WordPress">
+                    <p>WordPress : Plateforme populaire de gestion de contenu permettant de créer des sites web dynamiques et personnalisés.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementjs.png" alt="JavaScript" title="JavaScript">
+                    <p>JavaScript : Langage de programmation utilisé pour rendre les pages web interactives et dynamiques.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementphp.png" alt="PHP" title="PHP">
+                    <p>PHP : Langage de script utilisé principalement pour le développement web côté serveur, permettant de créer des sites web dynamiques.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementmysqm.png" alt="MySQL" title="MySQL">
+                    <p>MySQL : Système de gestion de base de données relationnelle utilisé pour stocker et gérer les données dans les applications web.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementhtml.png" alt="HTML" title="HTML">
+                    <p>HTML : Langage de balisage utilisé pour structurer le contenu d'une page web.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementcss.png" alt="CSS" title="CSS">
+                    <p>CSS : Langage utilisé pour décrire l'apparence et la mise en page d'un site web.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="téléchargementcom.jpg" alt="Comptabilité" title="Comptabilité">
+                    <p>Comptabilité : Connaissance des principes financiers, utile pour la gestion des ressources d’une entreprise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Mes Projets</h2>
+            <div class="row">
+                <div class="col-md-4 portfolio-item animate__animated animate__zoomIn">
+                    <img src="OIP1.jpg" alt="Projet 1" class="img-fluid">
+                    <h3>Mettre en place un serveur eLearning avec Canvas LMS</h3>
+                    <p>un système open-source de gestion de l'apprentissage qui permet de gérer des cours, des évaluations, des ressources pédagogiques et plus encore.</p>
+                </div>
+                <div class="col-md-4 portfolio-item animate__animated animate__zoomIn">
+                    <img src="Ressources-humaines-52.jpg" alt="Projet 2" class="img-fluid">
+                    <h3>Système de gestion des ressources humaines (HRMS)</h3>
+                    <p>Créez une application web qui permet aux entreprises de gérer les informations sur les employés, le suivi des congés, les évaluations de performance, et le recrutement.</p>
+                </div>
+                <div class="col-md-4 portfolio-item animate__animated animate__zoomIn">
+                    <img src="OIP3.jpg" alt="Projet 3" class="img-fluid">
+                    <h3>Système de gestion des stocks et des commandes</h3>
+                    <p>Développez un outil pour aider les entreprises à suivre leurs stocks, gérer les réapprovisionnements, et suivre les commandes des clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" class="form-control" id="name" placeholder="Votre Nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Votre Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Votre Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+            <p class="text-center mt-4">Ou vous pouvez me contacter par téléphone : <strong>Votre Numéro de Téléphone</strong> ou par email : <a href="mailto:khadyconde2020@gmail.com">khadyconde2020@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script de soumission du formulaire -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche le formulaire de se soumettre par défaut
+            alert("Message envoyé !");
+        });
+    </script>
+</body>
+</html>
